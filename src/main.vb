@@ -9,6 +9,7 @@ Module BinaryC
         Return file
     End Function
     Sub Main(args As String())
+        ' Read the file
         Console.WriteLine(ReadFile(args(0)))
     End Sub
 End Module
