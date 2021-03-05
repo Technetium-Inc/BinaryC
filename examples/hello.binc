@@ -1,5 +1,5 @@
-0 Mod
-10 Main()
-Console.WriteLine("Hello World")
-1 10
-1 0
+0000 0011
+0010 0011()
+0100("Hello World")
+0001 0010
+0001 0000
