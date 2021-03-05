@@ -34,6 +34,6 @@ Module BinaryC
         Dim code As String = ReadFile(args(0))
         ' Lex the code
         Dim toWrite As String = Compile(code)
-        Console.WriteLine(Compile(toWrite))
+        My.Computer.FileSystem.WriteAllText(".\" & args(0) & ".vb", toWrite, True)
     End Sub
 End Module
