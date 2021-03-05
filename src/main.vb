@@ -16,7 +16,7 @@ Module BinaryC
         text = Replace(text, "0011", "Main")
         text = Replace(text, "0100", "Console.WriteLine")
         text = Replace(text, "0101", "Console.ReadLine")
-        text = Replace(text, "0110", "Console.Write")
+        text = Replace(text, "0110", "Dim")
         text = Replace(text, "0111", "Function")
         text = Replace(text, "1000", "Return")
         text = Replace(text, "1001", "As")
