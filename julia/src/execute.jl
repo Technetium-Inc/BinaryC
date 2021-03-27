@@ -18,6 +18,11 @@ const commands = Dict{String, String}(
  	"1111" => "While"
 )
 
+@doc raw"""
+Take the code to execute and replace the keys of commands in 
+the execute_code with the corresponding value and return
+the value
+"""
 function execute_binary_c(execute_code::String)::String
 	for (key, value) in commands
 		execute_code = replace(execute_code, key => value)
@@ -25,5 +30,18 @@ function execute_binary_c(execute_code::String)::String
 	return execute_code
 end
 
+@doc raw"""
+Write the output_code into the dist folder
+"""
 function write_to_file(execute_code::String):Nothing
+	filepath::String = joinpath(pwd(), "dist")
+	if !isdir(filepath)
+		mkdir(filepath)
+	end
+
+	open(joinpath(filepath, "output.vb"), "w") do output_writer
+		write(output_writer, execute_code)
+	end
+
+	println("Succesfully compiled into $filepath")
 end
