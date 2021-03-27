@@ -9,6 +9,7 @@ function parse_command_arguments(argument::Array{String, 1})::Int64
 	required_command = argument[1]
 	if(endswith(required_command, ".binc"))
 		file = BinaryCFile(required_command)
+		is_valid_file(file)
 	else
 		error("$required_command not a binary c file")
 	end
