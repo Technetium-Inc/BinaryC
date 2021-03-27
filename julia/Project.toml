@@ -1,0 +1,4 @@
+name = "julia"
+uuid = "7227b652-f812-45e8-a8c9-b39513cf07d2"
+authors = ["Pranav <70764593+pranavbaburaj@users.noreply.github.com>"]
+version = "0.1.0"
