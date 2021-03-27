@@ -10,7 +10,9 @@ function is_valid_file(file::BinaryCFile):Nothing
 		file  = open(file.filename, "r")
 
 		file_read_data = read(file, String)
-		execute_binary_c(file_read_data)
+		compiled_code = execute_binary_c(file_read_data)
+
+		write_to_file(code)
 
 		close(file)
 	else
